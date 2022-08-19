@@ -27,7 +27,6 @@ if (!isset($_SESSION["user_id"])) {
   <?php
   require_once "./components/dbconnection.php";
   $user_id = $_SESSION["user_id"];
-  echo $user_id;
   $sql = "SELECT * from `list` WHERE user_id='$user_id'";
   $query = mysqli_query($db_connection, $sql);
   //همه ی فیلد هایی که پیدا کند برمیگرداند و ارایع اسوکی برمیگرداند
@@ -36,10 +35,10 @@ if (!isset($_SESSION["user_id"])) {
   for ($i = 0; $i < sizeof($query); $i++) {
   ?>
     <div class="message-container">
-      <h2 class=""><?= $query[$i]['title'] ?></h2>
-      <p class=""><?= $query[$i]['message'] ?></p>
-      <a href="" class="">update</a>
-      <a href="" class="">delete</a>
+      <h2 class="message-title"><?= $query[$i]['title'] ?></h2>
+      <p class="message-text"><?= $query[$i]['message'] ?></p>
+      <a href="./updateMessage/updateMessage.php?id=<?= $query[$i]['id'] ?>" class="message-button">update</a>
+      <a href="./deleteMessage/deleteMessage.php?id=<?= $query[$i]['id'] ?>" class="message-button">delete</a>
     </div>
   <?php
   }
