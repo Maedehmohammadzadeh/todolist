@@ -1,86 +1,122 @@
-*{
-    margin: 0%; 
+* {
+    margin: 0%;
     padding: 0%;
-    box-sizing: border-box;   
-    font-style:italic;
+    box-sizing: border-box;
+    font-style: italic;
 
 }
-body{
+
+body {
     width: 100%;
-    height:100vh;
+    background-color: #CEAB93;
+
+}
+
+.cont-page {
+    margin: 1% auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #CEAB93;
-    
-}
-.cont-page{
-    display: flex;
-    justify-content:center;
-    align-items: center;
     flex-direction: column;
-    width:30%;
-    border-radius:10px;
-    background-color:#CEAB93;
-    border:#fcfcfc 1px solid;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #CEAB93;
+    border: #fcfcfc 1px solid;
 }
 
-form{
+form {
     flex-direction: column;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    width:70%;
-    height:330px;
+    width: 70%;
+    height: 330px;
 }
-h1{
+
+h1 {
     margin-top: 5%;
     color: #fcfcfc;
 }
 
-.allinput{
-    width:100%;
-    height:40px;
-    margin:3%;
-    border-radius:25px;
+.allinput {
+    width: 100%;
+    height: 40px;
+    margin: 3%;
+    border-radius: 25px;
     text-align: center;
-    background-color:#FFFBE9;
+    background-color: #FFFBE9;
     border: none;
 }
-.allinput::placeholder{
+
+.allinput::placeholder {
     color: black;
 
 }
-label{
-    width:100%;
-    display:none;
+
+label {
+    width: 100%;
+    display: none;
     color: red;
-    font-size:15px;
+    font-size: 15px;
 }
-.bt1{
-    width:90%;
-    height:42px;
-    margin-top:12%;
-    color:black;
-    border-radius:20px;
-    background-color:#E3CAA5;
-    border:2px #fcfcfc solid;
+
+.bt1 {
+    width: 90%;
+    height: 42px;
+    margin-top: 12%;
+    color: black;
+    border-radius: 20px;
+    background-color: #E3CAA5;
+    border: 2px #fcfcfc solid;
 }
 
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-  .shake{
-      animation:shake 200ms;
-      animation-iteration-count:1;
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shake {
+    animation: shake 200ms;
+    animation-iteration-count: 1;
+}

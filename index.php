@@ -15,20 +15,15 @@ if (!isset($_SESSION["user_id"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TODO list</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <?php
+  include_once "./components/mainStyles.php";
+  ?>
   <link href="./css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-  <header class="header-container">
-    <a class="header-logo">TODO App</a>
-    <ul class="header-menu-items-container">
-      <a href="/todolist/index.php" class="header-menu-item">Home</a>
-      <a href="/todolist/singup/singup.php" class="header-menu-item">Sign-Up</a>
-      <a href="/todolist/singIn/singIn.php" class="header-menu-item">Login</a>
-      <a href="#" class="header-menu-item">Admin</a>
-    </ul>
-  </header>
   <?php
+  include_once "./components/header.php";
   if ($userlogin) {
   ?>
     <form action="./insertIntoDB.php" method='post' id="myDIV" class="form-container">

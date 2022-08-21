@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingUp</title>
+    <?php
+    include_once "../components/mainStyles.php";
+    ?>
     <link rel="stylesheet" href="singup.css">
 </head>
 
 <body>
+    <?php
+    include_once "../components/header.php";
+    ?>
     <div class="cont-page">
         <h1>Logo</h1>
         <form action="adduser.php" method="post" id="form">

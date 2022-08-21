@@ -15,7 +15,7 @@ if ($messageId <= 0) {
 $sql = "SELECT * FROM `list` WHERE id='$messageId' AND user_id='$userId'";
 $result = mysqli_query($db_connection, $sql);
 $result = mysqli_fetch_assoc($result);
-if($result === null){
+if ($result === null) {
     header("location: ../index.php");
 }
 ?>
@@ -28,9 +28,15 @@ if($result === null){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
     <link href="./style.css" rel="stylesheet" />
+    <?php
+    include_once "../components/mainStyles.php";
+    ?>
 </head>
 
 <body>
+    <?php
+    include_once "../components/header.php";
+    ?>
     <form action="./updateMessageDB.php?id=<?= $messageId ?>" method="POST" class="form-container">
         <h1 class="form-title">Update</h1>
         <input class="form-input" name="title" value="<?= $result["title"] ?>" />
