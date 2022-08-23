@@ -12,5 +12,8 @@ if ($query===null){
     // مسیر صفحه را عوض میکند
     header("location: singIn.php");
 }
+if(intval($query['admin_user'])){
+    $_SESSION["user_admin"] = true;
+}
 $_SESSION["user_id"] = $query["id"];
 header("location: ../index.php");

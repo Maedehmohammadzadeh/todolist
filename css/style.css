@@ -151,3 +151,33 @@ a[closeIcon] {
   color: #DFF6FF;
   background-color: #1363DF;
 }
+
+.pagination-container {
+  width: 50%;
+  margin: 1% auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-counter {
+  margin: 0 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #47B5FF;
+  color: #DFF6FF;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: form-title;
+  transition: all 400ms;
+}
+
+.pagination-counter:hover {
+  background-color: #06283D;
+}
+
+.pagination-counter-active {
+  background-color: #06283D;
+}
