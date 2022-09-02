@@ -76,6 +76,23 @@ $countItemInPage = 5;
     ?>
       <div class="message-container">
         <a class="bi bi-x-lg" href="./deleteMessage/deleteMessage.php?id=<?= $query[$i]['id'] ?>" closeIcon></a>
+        <?php
+        if (isset($_SESSION['user_admin'])) {
+        ?>
+          <h2 class="message-title user-admin-title">
+            username:&nbsp;&nbsp;&nbsp;<?php
+          
+             $userItemId=$query[$i]['user_id'];
+             $select_username="SELECT * FROM `account` WHERE id='$userItemId'";
+             $userName = mysqli_query($db_connection ,$select_username);
+             $userName= mysqli_fetch_assoc($userName);
+             $userName = $userName['username'];
+             echo $userName;
+              ?>
+          </h2>
+        <?php
+        }
+        ?>
         <h2 class="message-title"><?= $query[$i]['title'] ?></h2>
         <p class="message-text"><?= $query[$i]['message'] ?></p>
         <a href="./updateMessage/updateMessage.php?id=<?= $query[$i]['id'] ?>" class="message-button">Update</a>
@@ -105,7 +122,7 @@ $countItemInPage = 5;
   <?php
   }
   ?>
-  <script src="./script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

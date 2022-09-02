@@ -12,7 +12,12 @@ if ($messageId <= 0) {
     header("location: ../index.php");
 }
 // فیلد مربوط به آیدی پیغام و آيدی کاربر رو از دیتابیس میگیریم
-$sql = "SELECT * FROM `list` WHERE id='$messageId' AND user_id='$userId'";
+if(isset($_SESSION['user_admin'])){
+    $sql = "SELECT * FROM `list` WHERE id='$messageId'";
+
+}else{
+    $sql = "SELECT * FROM `list` WHERE id='$messageId' AND user_id='$userId'";
+}
 $result = mysqli_query($db_connection, $sql);
 $result = mysqli_fetch_assoc($result);
 if ($result === null) {

@@ -18,16 +18,16 @@
     <div class="cont-page">
         <h1>Logo</h1>
         <form action="adduser.php" method="post" id="form">
-            <input type="text" class="allinput select-input" name="username" id="name-input" placeholder="Enter your  Username">
+            <input type="text" class="allinput select-input" name="username" id="username-input" placeholder="Enter your  Username">
             <label for="" class="lable-error">your username must be 8 charchter</label>
 
             <input type="email" class="allinput" name="email" id="input-email" placeholder="Enter your Email">
             <label for="" class="lable-email">your Email must have @</label>
 
-            <input type="text" class="allinput select-input" id="family-input" name="password" placeholder="Enter your Password">
+            <input type="text" class="allinput select-input" id="password-input" name="password" placeholder="Enter your Password">
             <label for="" class="lable-error">your password must be 8 charchter</label>
 
-            <button type="submit" class="bt1" id="button">Sing Up</button>
+            <button type="button" class="bt1" id="button">Sing Up</button>
         </form>
     </div>
     <script src="singup.js"></script>

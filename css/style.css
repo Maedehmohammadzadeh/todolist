@@ -181,3 +181,6 @@ a[closeIcon] {
 .pagination-counter-active {
   background-color: #06283D;
 }
+.user-admin-title{
+  font-size:15px;
+}

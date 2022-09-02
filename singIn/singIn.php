@@ -29,10 +29,10 @@ if (isset($_SESSION["user_id"])) {
             <label for="">your Name must longe lenght </label>
             <input type="password" class="allinput select-input" id="family-input" name="password" placeholder="Enter your password">
             <label for="">your Familyname must longe lenght</label>
-            <button type="submit" class="bt1" id="button-singIn">Sing In</button>
+            <button type="submit" class="bt1" id="button-singIn">Login</button>
         </form>
     </div>
-    <script src="singIn.js"></script>
+    <!-- <script src="singIn.js"></script> -->
 </body>
 
 </html>

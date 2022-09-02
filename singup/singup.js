@@ -1,20 +1,16 @@
-const input=document.querySelectorAll('.select-input');
-const error=document.querySelectorAll('.lable-error');
-
-for(let i=0;i<input.length;i++){
-     input[i].addEventListener('blur',function (){
-        if(input[i].value.length<=8){
-            error[i].style.display="block";
-        }
-     });
-};
-
-const email_input=document.getElementById('input-email');
-const lable_email=document.getElementById('lable-email');
-console.log(email_input);
- email_input.addEventListener('blur' ,function(){
-    console.log(lable_email);
-    if(email_input.value.indexof('@')==-1){
-        
-    }
- })
+let submitFormButton = document.getElementById("button");
+submitFormButton.addEventListener("click", ()=>{
+   let userNameInput = document.getElementById("username-input");
+   let emailInput = document.getElementById("input-email");
+   let passwordInput = document.getElementById("password-input");
+   let formData = {
+      "username": userNameInput.value,
+      "email": emailInput.value,
+      "password": passwordInput.value,
+   }
+   formData = JSON.stringify(formData);
+   let makeUserRequest = new XMLHttpRequest();
+   makeUserRequest.setRequestHeader("application/json; charset=utf-8");
+   makeUserRequest.open("POST", "./adduser.php");
+   makeUserRequest.send(formData);
+})
